@@ -26,7 +26,7 @@ CREATE TABLE Products (
     stock INT DEFAULT 0,
     categoryId INT,
     imageUrl NVARCHAR(255),
-    discount DECIMAL(5, 2) NULL,
+    discount DECIMAL(5, 2) default 0,
     FOREIGN KEY (categoryId) REFERENCES Categories(categoryId)
 );
 

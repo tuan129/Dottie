@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="dottieModelStoreContainer" CdmEntityContainer="dottieEntities">
+  <EntityContainerMapping StorageEntityContainer="dottieModelStoreContainer" CdmEntityContainer="dottieEntities3">
     <EntitySetMapping Name="CartItems">
       <EntityTypeMapping TypeName="dottieModel.CartItem">
         <MappingFragment StoreEntitySet="CartItems">
@@ -16,6 +16,24 @@
         <MappingFragment StoreEntitySet="Categories">
           <ScalarProperty Name="categoryId" ColumnName="categoryId" />
           <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FavoriteItems">
+      <EntityTypeMapping TypeName="dottieModel.FavoriteItem">
+        <MappingFragment StoreEntitySet="FavoriteItems">
+          <ScalarProperty Name="favoriteItemId" ColumnName="favoriteItemId" />
+          <ScalarProperty Name="favoriteId" ColumnName="favoriteId" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Favorites">
+      <EntityTypeMapping TypeName="dottieModel.Favorite">
+        <MappingFragment StoreEntitySet="Favorites">
+          <ScalarProperty Name="favoriteId" ColumnName="favoriteId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -64,9 +82,7 @@
           <ScalarProperty Name="stock" ColumnName="stock" />
           <ScalarProperty Name="categoryId" ColumnName="categoryId" />
           <ScalarProperty Name="imageUrl" ColumnName="imageUrl" />
-          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
-          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
-          <ScalarProperty Name="discont" ColumnName="discont" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

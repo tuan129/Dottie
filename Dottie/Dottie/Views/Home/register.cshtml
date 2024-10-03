@@ -1,4 +1,5 @@
-﻿
+﻿@model Dottie.Models.User
+
 @{
     ViewBag.Title = "register";
     Layout = "~/Views/Shared/_MasterLayout.cshtml";
@@ -6,22 +7,32 @@
 
 @Styles.Render("~/Content/Css/Register.css");
 
-<div class="register-container">
-    <div class="register-content">
-        <h1 class="register-name">Đăng ký</h1>
-        <div class="input-register-container">
-            <input class="input-register" type="text" placeholder="Username" />
-            <input class="input-register" type="email" placeholder="Email" />
-            <input class="input-register" type="password" placeholder="Password" />
-            <p class="register-note">This site is protected by reCAPTCHA and the Google 
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> and
-                <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service </a>apply.</p>
-        </div>
-        <div class="register-footer-container">
-            <button class="btn-register">Đăng ký</button> 
-            <a>Bạn đã có tài khoản? @Html.ActionLink("Đăng nhập ngay", "TrangChu", "Home")</a>
+@using (Html.BeginForm("register", "Home", FormMethod.Post))
+{
+    <div class="register-container">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="register-content">
+            <h1 class="register-name">Đăng ký</h1>
+            <div class="input-register-container">
+                @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "input-register", placeholder = "Username" } })
+                @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "input-register", placeholder = "Email" } })
+                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+
+                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "input-register", placeholder = "Password" } })
+                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                <p class="register-note">
+                    This site is protected by reCAPTCHA and the Google
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> and
+                    <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service </a>apply.
+                </p>
+            </div>
+            <div class="register-footer-container">
+                <button type="submit" class="btn-register">Đăng ký</button>
+                <a>Bạn đã có tài khoản? @Html.ActionLink("Đăng nhập ngay", "TrangChu", "Home")</a>
+            </div>
         </div>
     </div>
-
-</div>
+}
 

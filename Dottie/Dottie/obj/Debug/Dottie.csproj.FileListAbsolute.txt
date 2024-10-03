@@ -81,3 +81,9 @@ C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\EntityFram
 C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\EntityFramework.SqlServer.dll
 C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\EntityFramework.xml
 C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\EntityFramework.SqlServer.xml
+C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\System.Net.Http.Formatting.dll
+C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\System.Web.Http.dll
+C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\System.Web.Http.WebHost.dll
+C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\System.Net.Http.Formatting.xml
+C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\System.Web.Http.xml
+C:\Users\thaot\OneDrive\Desktop\HTML,CSS\Dottie-Web\Dottie\Dottie\bin\System.Web.Http.WebHost.xml

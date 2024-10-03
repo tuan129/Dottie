@@ -13,10 +13,10 @@ namespace Dottie.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dottieEntities : DbContext
+    public partial class dottieEntities3 : DbContext
     {
-        public dottieEntities()
-            : base("name=dottieEntities")
+        public dottieEntities3()
+            : base("name=dottieEntities3")
         {
         }
     

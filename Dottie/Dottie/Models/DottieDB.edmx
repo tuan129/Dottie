@@ -100,7 +100,7 @@
           <Property Name="password" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="role" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK__CartItems__cartI__4E88ABD4">
+        <Association Name="FK__CartItems__cartI__4F7CD00D">
           <End Role="ShoppingCart" Type="Self.ShoppingCart" Multiplicity="0..1" />
           <End Role="CartItems" Type="Self.CartItems" Multiplicity="*" />
           <ReferentialConstraint>
@@ -112,7 +112,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CartItems__produ__4F7CD00D">
+        <Association Name="FK__CartItems__produ__5070F446">
           <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
           <End Role="CartItems" Type="Self.CartItems" Multiplicity="*" />
           <ReferentialConstraint>
@@ -124,7 +124,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FavoriteI__favor__5AEE82B9">
+        <Association Name="FK__FavoriteI__favor__5BE2A6F2">
           <End Role="Favorites" Type="Self.Favorites" Multiplicity="0..1" />
           <End Role="FavoriteItems" Type="Self.FavoriteItems" Multiplicity="*" />
           <ReferentialConstraint>
@@ -136,7 +136,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FavoriteI__produ__5BE2A6F2">
+        <Association Name="FK__FavoriteI__produ__5CD6CB2B">
           <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
           <End Role="FavoriteItems" Type="Self.FavoriteItems" Multiplicity="*" />
           <ReferentialConstraint>
@@ -148,7 +148,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Favorites__userI__5812160E">
+        <Association Name="FK__Favorites__userI__59063A47">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Favorites" Type="Self.Favorites" Multiplicity="*" />
           <ReferentialConstraint>
@@ -160,7 +160,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__order__46E78A0C">
+        <Association Name="FK__OrderDeta__order__47DBAE45">
           <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
           <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -172,7 +172,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__produ__47DBAE45">
+        <Association Name="FK__OrderDeta__produ__48CFD27E">
           <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
           <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -184,7 +184,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__userId__440B1D61">
+        <Association Name="FK__Orders__userId__44FF419A">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -196,7 +196,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Payments__orderI__5441852A">
+        <Association Name="FK__Payments__orderI__5535A963">
           <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
           <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
           <ReferentialConstraint>
@@ -208,7 +208,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__catego__3F466844">
+        <Association Name="FK__Products__catego__403A8C7D">
           <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -220,7 +220,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ShoppingC__userI__4BAC3F29">
+        <Association Name="FK__ShoppingC__userI__4CA06362">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="ShoppingCart" Type="Self.ShoppingCart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -243,47 +243,47 @@
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ShoppingCart" EntityType="Self.ShoppingCart" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__CartItems__cartI__4E88ABD4" Association="Self.FK__CartItems__cartI__4E88ABD4">
+          <AssociationSet Name="FK__CartItems__cartI__4F7CD00D" Association="Self.FK__CartItems__cartI__4F7CD00D">
             <End Role="ShoppingCart" EntitySet="ShoppingCart" />
             <End Role="CartItems" EntitySet="CartItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__CartItems__produ__4F7CD00D" Association="Self.FK__CartItems__produ__4F7CD00D">
+          <AssociationSet Name="FK__CartItems__produ__5070F446" Association="Self.FK__CartItems__produ__5070F446">
             <End Role="Products" EntitySet="Products" />
             <End Role="CartItems" EntitySet="CartItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__FavoriteI__favor__5AEE82B9" Association="Self.FK__FavoriteI__favor__5AEE82B9">
+          <AssociationSet Name="FK__FavoriteI__favor__5BE2A6F2" Association="Self.FK__FavoriteI__favor__5BE2A6F2">
             <End Role="Favorites" EntitySet="Favorites" />
             <End Role="FavoriteItems" EntitySet="FavoriteItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__FavoriteI__produ__5BE2A6F2" Association="Self.FK__FavoriteI__produ__5BE2A6F2">
+          <AssociationSet Name="FK__FavoriteI__produ__5CD6CB2B" Association="Self.FK__FavoriteI__produ__5CD6CB2B">
             <End Role="Products" EntitySet="Products" />
             <End Role="FavoriteItems" EntitySet="FavoriteItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__Favorites__userI__5812160E" Association="Self.FK__Favorites__userI__5812160E">
+          <AssociationSet Name="FK__Favorites__userI__59063A47" Association="Self.FK__Favorites__userI__59063A47">
             <End Role="Users" EntitySet="Users" />
             <End Role="Favorites" EntitySet="Favorites" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__order__46E78A0C" Association="Self.FK__OrderDeta__order__46E78A0C">
+          <AssociationSet Name="FK__OrderDeta__order__47DBAE45" Association="Self.FK__OrderDeta__order__47DBAE45">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__produ__47DBAE45" Association="Self.FK__OrderDeta__produ__47DBAE45">
+          <AssociationSet Name="FK__OrderDeta__produ__48CFD27E" Association="Self.FK__OrderDeta__produ__48CFD27E">
             <End Role="Products" EntitySet="Products" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__userId__440B1D61" Association="Self.FK__Orders__userId__440B1D61">
+          <AssociationSet Name="FK__Orders__userId__44FF419A" Association="Self.FK__Orders__userId__44FF419A">
             <End Role="Users" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Payments__orderI__5441852A" Association="Self.FK__Payments__orderI__5441852A">
+          <AssociationSet Name="FK__Payments__orderI__5535A963" Association="Self.FK__Payments__orderI__5535A963">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Payments" EntitySet="Payments" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__catego__3F466844" Association="Self.FK__Products__catego__3F466844">
+          <AssociationSet Name="FK__Products__catego__403A8C7D" Association="Self.FK__Products__catego__403A8C7D">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__ShoppingC__userI__4BAC3F29" Association="Self.FK__ShoppingC__userI__4BAC3F29">
+          <AssociationSet Name="FK__ShoppingC__userI__4CA06362" Association="Self.FK__ShoppingC__userI__4CA06362">
             <End Role="Users" EntitySet="Users" />
             <End Role="ShoppingCart" EntitySet="ShoppingCart" />
           </AssociationSet>
@@ -301,8 +301,8 @@
           <Property Name="cartId" Type="Int32" />
           <Property Name="productId" Type="Int32" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ShoppingCart" Relationship="Self.FK__CartItems__cartI__4E88ABD4" FromRole="CartItems" ToRole="ShoppingCart" />
-          <NavigationProperty Name="Product" Relationship="Self.FK__CartItems__produ__4F7CD00D" FromRole="CartItems" ToRole="Products" />
+          <NavigationProperty Name="ShoppingCart" Relationship="Self.FK__CartItems__cartI__4F7CD00D" FromRole="CartItems" ToRole="ShoppingCart" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__CartItems__produ__5070F446" FromRole="CartItems" ToRole="Products" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -310,7 +310,7 @@
           </Key>
           <Property Name="categoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="categoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Products" Relationship="Self.FK__Products__catego__3F466844" FromRole="Categories" ToRole="Products" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__catego__403A8C7D" FromRole="Categories" ToRole="Products" />
         </EntityType>
         <EntityType Name="FavoriteItem">
           <Key>
@@ -319,8 +319,8 @@
           <Property Name="favoriteItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="favoriteId" Type="Int32" />
           <Property Name="productId" Type="Int32" />
-          <NavigationProperty Name="Favorite" Relationship="Self.FK__FavoriteI__favor__5AEE82B9" FromRole="FavoriteItems" ToRole="Favorites" />
-          <NavigationProperty Name="Product" Relationship="Self.FK__FavoriteI__produ__5BE2A6F2" FromRole="FavoriteItems" ToRole="Products" />
+          <NavigationProperty Name="Favorite" Relationship="Self.FK__FavoriteI__favor__5BE2A6F2" FromRole="FavoriteItems" ToRole="Favorites" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__FavoriteI__produ__5CD6CB2B" FromRole="FavoriteItems" ToRole="Products" />
         </EntityType>
         <EntityType Name="Favorite">
           <Key>
@@ -329,8 +329,8 @@
           <Property Name="favoriteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="userId" Type="Int32" />
           <Property Name="createdAt" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="FavoriteItems" Relationship="Self.FK__FavoriteI__favor__5AEE82B9" FromRole="Favorites" ToRole="FavoriteItems" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Favorites__userI__5812160E" FromRole="Favorites" ToRole="Users" />
+          <NavigationProperty Name="FavoriteItems" Relationship="Self.FK__FavoriteI__favor__5BE2A6F2" FromRole="Favorites" ToRole="FavoriteItems" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Favorites__userI__59063A47" FromRole="Favorites" ToRole="Users" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
@@ -341,8 +341,8 @@
           <Property Name="productId" Type="Int32" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
           <Property Name="price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__order__46E78A0C" FromRole="OrderDetails" ToRole="Orders" />
-          <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__produ__47DBAE45" FromRole="OrderDetails" ToRole="Products" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__order__47DBAE45" FromRole="OrderDetails" ToRole="Orders" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__produ__48CFD27E" FromRole="OrderDetails" ToRole="Products" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -355,9 +355,9 @@
           <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="shippingAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="phoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__order__46E78A0C" FromRole="Orders" ToRole="OrderDetails" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Orders__userId__440B1D61" FromRole="Orders" ToRole="Users" />
-          <NavigationProperty Name="Payments" Relationship="Self.FK__Payments__orderI__5441852A" FromRole="Orders" ToRole="Payments" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__order__47DBAE45" FromRole="Orders" ToRole="OrderDetails" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Orders__userId__44FF419A" FromRole="Orders" ToRole="Users" />
+          <NavigationProperty Name="Payments" Relationship="Self.FK__Payments__orderI__5535A963" FromRole="Orders" ToRole="Payments" />
         </EntityType>
         <EntityType Name="Payment">
           <Key>
@@ -368,7 +368,7 @@
           <Property Name="paymentMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="paymentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="paymentDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__Payments__orderI__5441852A" FromRole="Payments" ToRole="Orders" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__Payments__orderI__5535A963" FromRole="Payments" ToRole="Orders" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -382,10 +382,10 @@
           <Property Name="categoryId" Type="Int32" />
           <Property Name="imageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="discount" Type="Decimal" Precision="5" Scale="2" />
-          <NavigationProperty Name="CartItems" Relationship="Self.FK__CartItems__produ__4F7CD00D" FromRole="Products" ToRole="CartItems" />
-          <NavigationProperty Name="Category" Relationship="Self.FK__Products__catego__3F466844" FromRole="Products" ToRole="Categories" />
-          <NavigationProperty Name="FavoriteItems" Relationship="Self.FK__FavoriteI__produ__5BE2A6F2" FromRole="Products" ToRole="FavoriteItems" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__produ__47DBAE45" FromRole="Products" ToRole="OrderDetails" />
+          <NavigationProperty Name="CartItems" Relationship="Self.FK__CartItems__produ__5070F446" FromRole="Products" ToRole="CartItems" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Products__catego__403A8C7D" FromRole="Products" ToRole="Categories" />
+          <NavigationProperty Name="FavoriteItems" Relationship="Self.FK__FavoriteI__produ__5CD6CB2B" FromRole="Products" ToRole="FavoriteItems" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__produ__48CFD27E" FromRole="Products" ToRole="OrderDetails" />
         </EntityType>
         <EntityType Name="ShoppingCart">
           <Key>
@@ -394,8 +394,8 @@
           <Property Name="cartId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="userId" Type="Int32" />
           <Property Name="createdAt" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="CartItems" Relationship="Self.FK__CartItems__cartI__4E88ABD4" FromRole="ShoppingCart" ToRole="CartItems" />
-          <NavigationProperty Name="User" Relationship="Self.FK__ShoppingC__userI__4BAC3F29" FromRole="ShoppingCart" ToRole="Users" />
+          <NavigationProperty Name="CartItems" Relationship="Self.FK__CartItems__cartI__4F7CD00D" FromRole="ShoppingCart" ToRole="CartItems" />
+          <NavigationProperty Name="User" Relationship="Self.FK__ShoppingC__userI__4CA06362" FromRole="ShoppingCart" ToRole="Users" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -406,11 +406,11 @@
           <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Favorites" Relationship="Self.FK__Favorites__userI__5812160E" FromRole="Users" ToRole="Favorites" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__userId__440B1D61" FromRole="Users" ToRole="Orders" />
-          <NavigationProperty Name="ShoppingCarts" Relationship="Self.FK__ShoppingC__userI__4BAC3F29" FromRole="Users" ToRole="ShoppingCart" />
+          <NavigationProperty Name="Favorites" Relationship="Self.FK__Favorites__userI__59063A47" FromRole="Users" ToRole="Favorites" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__userId__44FF419A" FromRole="Users" ToRole="Orders" />
+          <NavigationProperty Name="ShoppingCarts" Relationship="Self.FK__ShoppingC__userI__4CA06362" FromRole="Users" ToRole="ShoppingCart" />
         </EntityType>
-        <Association Name="FK__CartItems__cartI__4E88ABD4">
+        <Association Name="FK__CartItems__cartI__4F7CD00D">
           <End Role="ShoppingCart" Type="Self.ShoppingCart" Multiplicity="0..1" />
           <End Role="CartItems" Type="Self.CartItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -422,7 +422,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CartItems__produ__4F7CD00D">
+        <Association Name="FK__CartItems__produ__5070F446">
           <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
           <End Role="CartItems" Type="Self.CartItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -434,7 +434,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__catego__3F466844">
+        <Association Name="FK__Products__catego__403A8C7D">
           <End Role="Categories" Type="Self.Category" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -446,7 +446,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FavoriteI__favor__5AEE82B9">
+        <Association Name="FK__FavoriteI__favor__5BE2A6F2">
           <End Role="Favorites" Type="Self.Favorite" Multiplicity="0..1" />
           <End Role="FavoriteItems" Type="Self.FavoriteItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -458,7 +458,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FavoriteI__produ__5BE2A6F2">
+        <Association Name="FK__FavoriteI__produ__5CD6CB2B">
           <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
           <End Role="FavoriteItems" Type="Self.FavoriteItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -470,7 +470,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Favorites__userI__5812160E">
+        <Association Name="FK__Favorites__userI__59063A47">
           <End Role="Users" Type="Self.User" Multiplicity="0..1" />
           <End Role="Favorites" Type="Self.Favorite" Multiplicity="*" />
           <ReferentialConstraint>
@@ -482,7 +482,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__order__46E78A0C">
+        <Association Name="FK__OrderDeta__order__47DBAE45">
           <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
           <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -494,7 +494,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__produ__47DBAE45">
+        <Association Name="FK__OrderDeta__produ__48CFD27E">
           <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
           <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -506,7 +506,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__userId__440B1D61">
+        <Association Name="FK__Orders__userId__44FF419A">
           <End Role="Users" Type="Self.User" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -518,7 +518,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Payments__orderI__5441852A">
+        <Association Name="FK__Payments__orderI__5535A963">
           <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
           <End Role="Payments" Type="Self.Payment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -530,7 +530,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ShoppingC__userI__4BAC3F29">
+        <Association Name="FK__ShoppingC__userI__4CA06362">
           <End Role="Users" Type="Self.User" Multiplicity="0..1" />
           <End Role="ShoppingCart" Type="Self.ShoppingCart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -542,7 +542,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="dottieEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="dottieEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CartItems" EntityType="Self.CartItem" />
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="FavoriteItems" EntityType="Self.FavoriteItem" />
@@ -553,47 +553,47 @@
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="ShoppingCarts" EntityType="Self.ShoppingCart" />
           <EntitySet Name="Users" EntityType="Self.User" />
-          <AssociationSet Name="FK__CartItems__cartI__4E88ABD4" Association="Self.FK__CartItems__cartI__4E88ABD4">
+          <AssociationSet Name="FK__CartItems__cartI__4F7CD00D" Association="Self.FK__CartItems__cartI__4F7CD00D">
             <End Role="ShoppingCart" EntitySet="ShoppingCarts" />
             <End Role="CartItems" EntitySet="CartItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__CartItems__produ__4F7CD00D" Association="Self.FK__CartItems__produ__4F7CD00D">
+          <AssociationSet Name="FK__CartItems__produ__5070F446" Association="Self.FK__CartItems__produ__5070F446">
             <End Role="Products" EntitySet="Products" />
             <End Role="CartItems" EntitySet="CartItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__catego__3F466844" Association="Self.FK__Products__catego__3F466844">
+          <AssociationSet Name="FK__Products__catego__403A8C7D" Association="Self.FK__Products__catego__403A8C7D">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__FavoriteI__favor__5AEE82B9" Association="Self.FK__FavoriteI__favor__5AEE82B9">
+          <AssociationSet Name="FK__FavoriteI__favor__5BE2A6F2" Association="Self.FK__FavoriteI__favor__5BE2A6F2">
             <End Role="Favorites" EntitySet="Favorites" />
             <End Role="FavoriteItems" EntitySet="FavoriteItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__FavoriteI__produ__5BE2A6F2" Association="Self.FK__FavoriteI__produ__5BE2A6F2">
+          <AssociationSet Name="FK__FavoriteI__produ__5CD6CB2B" Association="Self.FK__FavoriteI__produ__5CD6CB2B">
             <End Role="Products" EntitySet="Products" />
             <End Role="FavoriteItems" EntitySet="FavoriteItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__Favorites__userI__5812160E" Association="Self.FK__Favorites__userI__5812160E">
+          <AssociationSet Name="FK__Favorites__userI__59063A47" Association="Self.FK__Favorites__userI__59063A47">
             <End Role="Users" EntitySet="Users" />
             <End Role="Favorites" EntitySet="Favorites" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__order__46E78A0C" Association="Self.FK__OrderDeta__order__46E78A0C">
+          <AssociationSet Name="FK__OrderDeta__order__47DBAE45" Association="Self.FK__OrderDeta__order__47DBAE45">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__produ__47DBAE45" Association="Self.FK__OrderDeta__produ__47DBAE45">
+          <AssociationSet Name="FK__OrderDeta__produ__48CFD27E" Association="Self.FK__OrderDeta__produ__48CFD27E">
             <End Role="Products" EntitySet="Products" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__userId__440B1D61" Association="Self.FK__Orders__userId__440B1D61">
+          <AssociationSet Name="FK__Orders__userId__44FF419A" Association="Self.FK__Orders__userId__44FF419A">
             <End Role="Users" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Payments__orderI__5441852A" Association="Self.FK__Payments__orderI__5441852A">
+          <AssociationSet Name="FK__Payments__orderI__5535A963" Association="Self.FK__Payments__orderI__5535A963">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Payments" EntitySet="Payments" />
           </AssociationSet>
-          <AssociationSet Name="FK__ShoppingC__userI__4BAC3F29" Association="Self.FK__ShoppingC__userI__4BAC3F29">
+          <AssociationSet Name="FK__ShoppingC__userI__4CA06362" Association="Self.FK__ShoppingC__userI__4CA06362">
             <End Role="Users" EntitySet="Users" />
             <End Role="ShoppingCart" EntitySet="ShoppingCarts" />
           </AssociationSet>
@@ -603,7 +603,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="dottieModelStoreContainer" CdmEntityContainer="dottieEntities">
+        <EntityContainerMapping StorageEntityContainer="dottieModelStoreContainer" CdmEntityContainer="dottieEntities3">
           <EntitySetMapping Name="CartItems">
             <EntityTypeMapping TypeName="dottieModel.CartItem">
               <MappingFragment StoreEntitySet="CartItems">

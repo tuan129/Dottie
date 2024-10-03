@@ -109,38 +109,30 @@
                                 <i class="ti-close"></i>
                             </div>
                             <div class="header-modal-user">
-                                <h1>
-                                    Đăng nhập tài khoản
-                                </h1>
-                                <h2>
-                                    Nhập email và mật khẩu của bạn:
-                                </h2>
+                                <h1>Đăng nhập tài khoản</h1>
+                                <h2>Nhập email và mật khẩu của bạn:</h2>
                             </div>
                             <div class="content-modal-user">
-                                <div class="input-content-user">
-                                    <input type="email" required placeholder="Email" />
-                                    <input type="password" required placeholder="Password" />
-                                    <p>This site is protected by reCAPTCHA and the <br /> Google Privacy Policy and Terms of Service apply.</p>
-                                </div>
-                                <button class="btn-login" type="submit">Đăng nhập</button>
+                                <form id="loginForm" method="post" action="@Url.Action("login", "Home")">
+                                    <div class="input-content-user">
+                                        <input type="email" name="Email" required placeholder="Email" />
+                                        <input type="password" name="Password" required placeholder="Password" />
+                                        <p>This site is protected by reCAPTCHA and the <br /> Google Privacy Policy and Terms of Service apply.</p>
+                                    </div>
+                                    <button class="btn-login" type="submit">Đăng nhập</button>
+                                </form>
                             </div>
                             <div class="footer-modal-user">
                                 <p>
-                                    Khách hàng mới?
-                                    <a>
-                                        @Html.ActionLink("Tạo tài khoản", "register", "Home")
-                                    </a>
+                                    Khách hàng mới? <a>@Html.ActionLink("Tạo tài khoản", "register", "Home")</a>
                                 </p>
-
                                 <p>
-                                    Quên mật khẩu?
-                                    <a>
-                                        @Html.ActionLink("Khôi phục mật khẩu", "dottie-store", "Home")
-                                    </a>
+                                    Quên mật khẩu? <a>@Html.ActionLink("Khôi phục mật khẩu", "dottie-store", "Home")</a>
                                 </p>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="icon-container">
                     <i class="js-cart nav-icon ti-shopping-cart"></i>
