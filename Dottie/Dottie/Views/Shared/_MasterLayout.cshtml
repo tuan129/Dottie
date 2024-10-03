@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/icon/themify-icons/themify-icons.css")
+    @Styles.Render("~/Content/Css/MasterLayout.css?v=1.0")
+</head>
+<body>
+    <header id="header">
+        <div class="banner-container">
+            <div class="banner">
+                <img class="banner-image" src="~/Content/image/topbar1.jpg" alt="banner1" />
+                <img class="banner-image" src="~/Content/image/topbar2.jpg" alt="banner2" />
+            </div>
+        </div>
+        <div class="banner-contact">
+            <div class="banner-contact-container">
+                <div>Hotline: 0938.244.006 (8h - 22h)</div>
+                <div class="line"></div>
+                <div>Liên Hệ</div>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="#" class="logo">
+                <img class="logo-img" src="https://theme.hstatic.net/1000324561/1001250011/14/logo.png?v=593" />
+            </a>
+            <ul class="nav">
+                <li class="item-nav">
+                    @Html.ActionLink("New", "New", "Home")
+                </li>
+                <li class="item-nav">
+                    <a class="nav-item">
+                        shop
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="sub-nav">
+                        <li>top</li>
+                        <li>bottom & skirt</li>
+                        <li>dress</li>
+                    </ul>
+                </li>
+                <li class="item-nav">
+                    <a class="nav-item" href="#">
+                        @Html.ActionLink("best sellers", "best-sellers", "Home")
+                    </a>
+                </li>
+                <li class="item-nav">
+                    <a class="nav-item">
+                        hot restock
+                    </a>
+                </li>
+                <li class="item-nav">
+                    <a class="nav-item">
+                        collections
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="sub-nav">
+                        <li>@Html.ActionLink("DAINTY DEMURE", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("MISTY DRIZZLE", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("GEEK GLAM", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("GLOW FANTASY", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("HEALIDAY", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("RED FLAVOR", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("GREEN GABLES", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("BLUEMING", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("ROLLING SUMMER", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("SERENE", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("EVERGLOW", "best-sellers", "Home")</li>
+                        <li>@Html.ActionLink("PARADISE PALMS", "best-sellers", "Home")</li>
+                    </ul>
+                </li>
+                <li class="item-nav">
+                    <a class="nav-item">
+                        sale
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="sub-nav">
+                        <li>all sale</li>
+                        <li>dell from 79k</li>
+                        <li>dell from 99</li>
+                        <li>dell from 119k</li>
+                        <li>dell from 199k</li>
+                    </ul>
+                </li>
+                <li class="item-nav">
+                    <a>
+                        @Html.ActionLink("dottie store", "dottie-store", "Home")
+                    </a>
+                </li>
+            </ul>
+            <div class="left-nav">
+                <div class="icon-container">
+                    <i class="nav-icon ti-heart"></i>
+                    <span class="badge">0</span>
+                </div>
+                <div class="icon-container">
+                    <i class="nav-icon ti-search"></i>
+                </div>
+                <div class="icon-container">
+                    <i class="js-user nav-icon ti-user"></i>
+
+                    <div class="modal-user js-modal-user">
+                        <div class="modal-container-user js-modal-container-user">
+                            <div class="modal-close-user js-modal-close-user">
+                                <i class="ti-close"></i>
+                            </div>
+                            <div class="header-modal-user">
+                                <h1>
+                                    Đăng nhập tài khoản
+                                </h1>
+                                <h2>
+                                    Nhập email và mật khẩu của bạn:
+                                </h2>
+                            </div>
+                            <div class="content-modal-user">
+                                <div class="input-content-user">
+                                    <input type="email" required placeholder="Email" />
+                                    <input type="password" required placeholder="Password" />
+                                    <p>This site is protected by reCAPTCHA and the <br /> Google Privacy Policy and Terms of Service apply.</p>
+                                </div>
+                                <button class="btn-login" type="submit">Đăng nhập</button>
+                            </div>
+                            <div class="footer-modal-user">
+                                <p>
+                                    Khách hàng mới?
+                                    <a>
+                                        @Html.ActionLink("Tạo tài khoản", "register", "Home")
+                                    </a>
+                                </p>
+
+                                <p>
+                                    Quên mật khẩu?
+                                    <a>
+                                        @Html.ActionLink("Khôi phục mật khẩu", "dottie-store", "Home")
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon-container">
+                    <i class="js-cart nav-icon ti-shopping-cart"></i>
+                    <span class="badge">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="header-modal">
+                    <h1>Giỏ hàng</h1>
+                    <div class="modal-close js-modal-close">
+                        <i class="ti-close"></i>
+                    </div>
+                </div>
+
+                <div class="content-modal">
+                    <img class="modal-img" src="https://theme.hstatic.net/1000324561/1001250011/14/cart_banner_image.jpg?v=597" />
+                    <p>Chưa có sản phẩm trong giỏ hàng...</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="list-container">
+           <div class="list-box">
+               <p class="list-item">Trang chủ</p>
+               <div class="list-line"></div>
+               <p class="list-item">Hàng mới</p>
+           </div>
+        </div>
+</header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="footer">
+        <div class="footer-box">
+            <a class="footer-logo" href="#">
+                <img class="logo-footer" src="https://file.hstatic.net/1000324561/file/logo_9ecaee0870fc44b796928d9e0c485a6d.png" />
+            </a>
+            <div class="container-footer">
+                <div class="footer-item">
+                    <p>
+                        Our Story
+                    </p>
+                    <p>
+                        Franchise
+                    </p>
+                    <p>
+                        Join Our Team!
+                    </p>
+                    <p>
+                        How To Shop
+                    </p>
+                </div>
+                <div class="footer-item">
+                    <p>
+                        Chính sách thành viên
+                    </p>
+                    <p>
+                        Chính sách bảo mật
+                    </p>
+                    <p>
+                        Chính sách thanh toán
+                    </p>
+                    <p>
+                        Chính sách đổi và bảo hành sản phẩm
+                    </p>
+                    <p>
+                        Chính sách bảo vệ thông tin cá nhân của người tiêu dùng
+                    </p>
+                </div>
+                <div class="footer-item">
+                    <div class="media-footer">
+                        <i class="icon-footer ti-facebook"></i>
+                        <i class="icon-footer ti-instagram"></i>
+                        <i class="icon-footer ti-tumblr-alt"></i>
+                    </div>
+                    <div class="contact-footer">
+                        <i class="icon-footer ti-mobile">
+                            <a href="tel:0938244006">0938244006</a>
+                        </i>
+                        <i class="icon-footer ti-email">
+                            <a href="mailto:wecare@dottie.vn">wecare@dottie.vn</a>
+                        </i>
+                    </div>
+                    <img class="footer-img" src="https://file.hstatic.net/1000300454/file/logo_bct_019590229b4c4dfda690236b67f7aff4.png" />
+                </div>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/Scripts/JavaScript/amination.js")
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿.product-container {
+	padding: 20px 0;
+	border-top: 1px solid #dfe2e6;
+	display: flex;
+	justify-content: center;
+}
+
+.product-box {
+	width: 1255px;
+	display: flex;
+	flex-direction: column;
+}
+
+.product {
+	position: relative;
+	width: 23.33333333%;
+	padding: 8px;
+	overflow: hidden;
+}
+
+.product:hover {
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.percent {
+	line-height: 1;
+	padding: 4px 10px;
+	border-radius: 20px;
+	text-align: center;
+	background: #f40000;
+	width: 30px;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 12px;
+	z-index: 2; 
+}
+
+.icon-product-heart {
+	position: absolute;
+	right: 16px;
+	top: 12px;
+	font-size: 20px;
+	background-color: white;
+	width: 35px;
+	height: 35px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 9999px;
+	z-index: 2; 
+}
+
+.product-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+.img-container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%; 
+	overflow: hidden;
+}
+
+.img-product {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	object-fit: cover; 
+}
+
+.first-img {
+	z-index: 1;
+}
+
+.second-img {
+	z-index: 0;
+	opacity: 0;
+}
+
+.product:hover .first-img {
+	transform: translateX(100%); /* Di chuyển ảnh đầu tiên sang phải */
+	opacity: 0; /* Làm mờ ảnh đầu tiên */
+}
+
+.product:hover .second-img {
+	opacity: 1; /* Hiển thị ảnh thứ hai */
+	transform: translateX(0); /* Đặt lại vị trí ảnh thứ hai */
+}
+
+.name-product {
+	color: #252a2b;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-top: 12px;
+}
+
+.new-price-product {
+	color: #ff2c26;
+	margin-right: 6px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.45;
+}
+
+.old-price-product {
+	color: #878c8f;
+	text-decoration: line-through;
+	font-weight: 300;
+	font-size: 13px;
+}
+
+.color-product {
+	background-color: black;
+	width: 14px;
+	height: 14px;
+	border-radius: 9999px;
+}
+
+.percent-discount {
+	display: inline-block;
+	padding: 5px 8px;
+	border: 1px solid #f40000;
+	font-size: 12px;
+	color: #f40000;
+	font-weight: 600;
+	border-radius: 4px;
+}
+
+.img-product,
+.name-product,
+.new-price-product,
+.color-product,
+.percent-discount {
+	margin-bottom: 12px;
+}
