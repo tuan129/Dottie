@@ -1,5 +1,6 @@
-﻿-- Tạo bảng Users (thông tin người dùng)
-create database dottie;
+﻿-- Tạo cơ sở dữ liệu
+CREATE DATABASE dottie;
+USE dottie;
 
 -- Tạo bảng Users (thông tin người dùng)
 CREATE TABLE Users (
@@ -7,7 +8,7 @@ CREATE TABLE Users (
     username NVARCHAR(255) NOT NULL UNIQUE,
     email NVARCHAR(255) NOT NULL UNIQUE,
     password NVARCHAR(255) NOT NULL,
-    role NVARCHAR(50) default 'khách hàng' 
+    role NVARCHAR(50) DEFAULT 'khách hàng' 
 );
 
 -- Tạo bảng Categories (danh mục sản phẩm)
@@ -25,7 +26,7 @@ CREATE TABLE Products (
     stock INT DEFAULT 0,
     categoryId INT,
     imageUrl NVARCHAR(255),
-	discont DECIMAL(5, 2) NULL,
+    discount DECIMAL(5, 2) NULL,
     FOREIGN KEY (categoryId) REFERENCES Categories(categoryId)
 );
 
@@ -80,17 +81,41 @@ CREATE TABLE Payments (
     FOREIGN KEY (orderId) REFERENCES Orders(orderId)
 );
 
+-- Tạo bảng Favorites (sản phẩm yêu thích)
+CREATE TABLE Favorites (
+    favoriteId INT PRIMARY KEY IDENTITY(1,1),
+    userId INT,
+    createdAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (userId) REFERENCES Users(userId)
+);
+
+-- Tạo bảng FavoriteItems (chi tiết sản phẩm yêu thích)
+CREATE TABLE FavoriteItems (
+    favoriteItemId INT PRIMARY KEY IDENTITY(1,1),
+    favoriteId INT,
+    productId INT,
+    FOREIGN KEY (favoriteId) REFERENCES Favorites(favoriteId),
+    FOREIGN KEY (productId) REFERENCES Products(productId)
+);
+
+
 -- Chèn dữ liệu mẫu vào bảng Users
 INSERT INTO Users (username, email, password, role) VALUES 
-(N'admin', N'maithaituan129@gmail.com', N'091204', N'Admin')
+(N'admin', N'maithaituan129@gmail.com', N'091204', N'Admin'),
+(N'user1', N'user1@example.com', N'password1', N'Khách hàng'),
+(N'user2', N'user2@example.com', N'password2', N'Khách hàng');
 
 -- Chèn dữ liệu mẫu vào bảng Categories
 INSERT INTO Categories (categoryName) VALUES 
-(N'Trousers')
+(N'Trousers'),
+(N'T-Shirts'),
+(N'Jackets');
 
 -- Chèn dữ liệu mẫu vào bảng Products
-INSERT INTO Products (productName, price, description, stock, categoryId, imageUrl) VALUES 
-(N'Jeans', 50.00, N'Comfortable denim jeans', 20, 1, N'jeans.jpg')
+INSERT INTO Products (productName, price, description, stock, categoryId, imageUrl, discount) VALUES 
+(N'Jeans', 50.00, N'Comfortable denim jeans', 20, 1, N'jeans.jpg', 15.00), 
+(N'T-Shirt', 20.00, N'Soft cotton T-shirt', 50, 2, N'tshirt.jpg', NULL),
+(N'Jacket', 80.00, N'Warm winter jacket', 15, 3, N'jacket.jpg', 10.00);
 
 -- Chèn dữ liệu mẫu vào bảng Orders
 INSERT INTO Orders (userId, totalAmount, orderDate, status, shippingAddress, phoneNumber) VALUES 
@@ -116,15 +141,17 @@ INSERT INTO CartItems (cartId, productId, quantity) VALUES
 
 -- Chèn dữ liệu mẫu vào bảng Payments
 INSERT INTO Payments (orderId, paymentMethod, paymentStatus) VALUES 
-(1, N'Credit Card', N'Pending')
+(1, N'Credit Card', N'Pending'),
+(2, N'Debit Card', N'Pending');
 
-INSERT INTO Products (productName, price, description, stock, categoryId, imageUrl, discont) VALUES 
-(N'Jeans', 50.00, N'Comfortable denim jeans', 20, 1, N'jeans.jpg', 15.00) 
-SELECT * FROM Categories;
+-- Chèn dữ liệu mẫu vào bảng Favorites
+INSERT INTO Favorites (userId) VALUES 
+(1), 
+(2);
 
-INSERT INTO Categories (categoryName) VALUES (N'Trousers');
+-- Chèn dữ liệu mẫu vào bảng FavoriteItems
+INSERT INTO FavoriteItems (favoriteId, productId) VALUES 
+(1, 1),  -- Sản phẩm yêu thích của userId 1
+(1, 2),  -- Sản phẩm yêu thích khác của userId 1
+(2, 3);  -- Sản phẩm yêu thích của userId 2
 
-DBCC CHECKIDENT ('Products', RESEED, 0); 
-
-
-SELECT * FROM Products;

@@ -1,0 +1,48 @@
+﻿.favourite-container{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 24px;
+}
+
+.favourite-content {
+	width: 1255px;
+	background: #fff;
+	padding: 10px 15px;
+	height: 100%;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.name-tag {
+	font-weight: 700;
+	font-size: 28px;
+	margin: 0 0 20px;
+	color: #333333;
+	text-transform: uppercase;
+}
+
+.content-null-favourite {
+	max-width: 400px;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+
+.null-favourite {
+	font-size: 14px;
+	margin-bottom: 20px;
+
+}
+
+.btn-add-more {
+	text-transform: initial;
+	font-size: 14px;
+	margin-top: 15px;
+	padding: 10px 25px;
+	border-radius: 25px;
+	border: 1px solid #252a2b;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	letter-spacing: 2px;
+	color: #252a2b;
+}

@@ -27,6 +27,8 @@ namespace Dottie.Models
     
         public virtual DbSet<CartItem> CartItems { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<FavoriteItem> FavoriteItems { get; set; }
+        public virtual DbSet<Favorite> Favorites { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }

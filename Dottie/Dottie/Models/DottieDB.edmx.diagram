@@ -4,25 +4,31 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2f0fab37ad4f4294b6b2cd66c0c8dcfa" Name="Diagram1" ZoomLevel="97">
-        <EntityTypeShape EntityType="dottieModel.CartItem" Width="1.5" PointX="2.125" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="dottieModel.Category" Width="1.5" PointX="7.25" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="dottieModel.OrderDetail" Width="1.5" PointX="10" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="dottieModel.Order" Width="1.5" PointX="10.25" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="dottieModel.Payment" Width="1.5" PointX="13.5" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="dottieModel.Product" Width="1.5" PointX="5.875" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="dottieModel.ShoppingCart" Width="1.5" PointX="2.375" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="dottieModel.User" Width="1.5" PointX="5" PointY="5.75" IsExpanded="true" />
-        <AssociationConnector Association="dottieModel.FK__CartItems__cartI__5070F446" ManuallyRouted="false" />
-        <AssociationConnector Association="dottieModel.FK__CartItems__produ__5165187F" ManuallyRouted="false" />
-        <AssociationConnector Association="dottieModel.FK__Products__catego__412EB0B6" ManuallyRouted="false" />
-        <AssociationConnector Association="dottieModel.FK__OrderDeta__order__48CFD27E" ManuallyRouted="false" >
+      <Diagram DiagramId="ebd7abd134db4010b32cb7c33cd134d4" Name="Diagram1" ZoomLevel="42">
+        <EntityTypeShape EntityType="dottieModel.CartItem" Width="1.5" PointX="12.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dottieModel.Category" Width="1.5" PointX="17.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="dottieModel.FavoriteItem" Width="1.5" PointX="12.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dottieModel.Favorite" Width="1.5" PointX="9.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dottieModel.OrderDetail" Width="1.5" PointX="12.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dottieModel.Order" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dottieModel.Payment" Width="1.5" PointX="6.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dottieModel.Product" Width="1.5" PointX="14.875" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dottieModel.ShoppingCart" Width="1.5" PointX="9.625" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dottieModel.User" Width="1.5" PointX="7.375" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="dottieModel.FK__CartItems__cartI__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="dottieModel.FK__CartItems__produ__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="dottieModel.FK__Products__catego__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="dottieModel.FK__FavoriteI__favor__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="dottieModel.FK__FavoriteI__produ__5BE2A6F2" ManuallyRouted="false" >
         </AssociationConnector>
-        <AssociationConnector Association="dottieModel.FK__OrderDeta__produ__49C3F6B7" ManuallyRouted="false" >
+        <AssociationConnector Association="dottieModel.FK__Favorites__userI__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="dottieModel.FK__OrderDeta__order__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="dottieModel.FK__OrderDeta__produ__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="dottieModel.FK__Orders__userId__440B1D61" ManuallyRouted="false" >
         </AssociationConnector>
-        <AssociationConnector Association="dottieModel.FK__Orders__userId__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="dottieModel.FK__Payments__orderI__5629CD9C" ManuallyRouted="false" />
-        <AssociationConnector Association="dottieModel.FK__ShoppingC__userI__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="dottieModel.FK__Payments__orderI__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="dottieModel.FK__ShoppingC__userI__4BAC3F29" ManuallyRouted="false" >
+        </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

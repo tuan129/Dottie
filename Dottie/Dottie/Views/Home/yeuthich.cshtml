@@ -4,5 +4,21 @@
     Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
-<h2>yeuthich</h2>
+@Styles.Render("~/Content/Css/Favourite.css");
 
+<div class="favourite-container">
+    <div class="favourite-content">
+        <h1 class="name-tag">yêu thích</h1>
+        <div class="content-favourite">
+            <div class="content-null-favourite">
+
+                <p class="null-favourite">
+                    Danh sách sản phẩm yêu thích của bạn đang trống.<br />
+                    Lưu những món đồ bạn thích nhất tại đây nhé
+                </p>
+                <a>@Html.ActionLink("xem thêm sản phẩm", "Trangchu", "Home", new { @class = "btn-add-more" })</a>
+            </div>
+
+        </div>
+    </div>
+</div>
