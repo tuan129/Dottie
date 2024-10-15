@@ -1,0 +1,161 @@
+﻿.container-cart{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.content-cart{
+	width: 1255px;
+	display: flex;
+}
+
+.name-cart {
+	align-self: flex-start;
+	font-size: 24px;
+	margin: 0 0 6px 36px;
+}
+
+.left-content-cart {
+	height: fit-content;
+	width: 69.9999%;
+	padding: 8px 10px;
+	border: 2px solid #eae4e8;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.item-cart {
+	padding: 10px 8px;
+	justify-content: space-between;
+	display: flex;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.product-img-cart{
+	position: relative;
+}
+
+.img-cart {
+	object-fit: contain;
+	width: 80px;
+	height: 120px;
+}
+
+.box-close {
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #eae4e8;
+	border-radius: 99999px;
+	background: #8f9bb3;
+	text-align: center;
+}
+
+.name-product-cart {
+	color: #252a2b;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+}
+
+.btn-close {
+	line-height: 20px;
+	border: none;
+	background: none;
+}
+
+.price-cart {
+	font-weight: 500;
+	color: #8f9bb3;
+}
+
+.price-cart-main {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 12px;
+}
+
+.increse-cart,
+.reduce-cart {
+	font-weight: 500;
+	font-size: 18px;
+	padding: 0;
+	height: 28px;
+	width: 28px;
+	text-align: center;
+	background: #f9f9f9;
+	color: #252a2b;
+	border: 1px solid #f9f9f9;
+	outline: none;
+}
+
+.quantity-input {
+	font-weight: 500;
+	font-size: 15px;
+	width: 28px;
+	height: 28px;
+	padding: 0;
+	background: #fff;
+	text-align: center;
+	outline: none;
+	border: 1px solid #f9f9f9;
+}
+
+.right-content-cart {
+	width: 29.99999%;
+	background: #fff;
+	padding: 15px;
+	margin: 0 0 15px 24px;
+	border: 2px solid #eae4e8;
+	border-radius: 8px;
+}
+
+
+.info-order {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.total-order {
+	font-size: 16px;
+	padding-bottom: 32px;
+	padding-top: 10px;
+	font-weight: bold;
+	border-bottom: 1px dotted #dfe0e1;
+	margin-bottom: 10px;
+}
+
+.total-money {
+	font-weight: bold;
+	float: right;
+	color: red;
+	font-size: 24px;
+}
+
+li {
+	font-size: 8px;
+	margin-bottom: 4px;
+	padding-left: 15px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.btn-payment {
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 5px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 0;
+	margin-top: 12px;
+	width: 100%;
+}

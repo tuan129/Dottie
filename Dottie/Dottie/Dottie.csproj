@@ -144,6 +144,7 @@
     <Compile Include="Models\CartItem.cs">
       <DependentUpon>DottieDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CartViewModel.cs" />
     <Compile Include="Models\Category.cs">
       <DependentUpon>DottieDB.tt</DependentUpon>
     </Compile>
@@ -193,10 +194,14 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\Cart.css" />
     <Content Include="Content\Css\Favourite.css" />
     <Content Include="Content\Css\HomeProduct.css" />
+    <Content Include="Content\Css\infoAccount.css" />
     <Content Include="Content\Css\MasterLayout.css" />
+    <Content Include="Content\Css\productDetails.css" />
     <Content Include="Content\Css\Register.css" />
+    <Content Include="Content\Css\Thanhtoan.css" />
     <Content Include="Content\icon\themify-icons\demo-files\demo.css" />
     <Content Include="Content\icon\themify-icons\fonts\themify.svg" />
     <Content Include="Content\icon\themify-icons\ie7\ie7.css" />
@@ -610,6 +615,10 @@
     <Content Include="Views\Home\TrangChu.cshtml" />
     <Content Include="Views\Home\register.cshtml" />
     <Content Include="Views\Home\yeuthich.cshtml" />
+    <Content Include="Views\Home\infoAccount.cshtml" />
+    <Content Include="Views\Home\ProductDetailWithID.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Home\Thanhtoan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+@Styles.Render("~/Content/Css/Cart.css");
+
+<div class="container-cart">
+    <h1 class="name-cart">Giỏ hàng của bạn</h1>
+    <div class="content-cart">
+        <div class="left-content-cart">
+            @if (Model.CartItems.Count > 0)
+            {
+                foreach (var item in Model.CartItems)
+                {
+                    <div class="item-cart" data-price="@item.Product.price">
+                        <div class="product-img-cart">
+                            <img class="img-cart" src="@item.Product.imageUrl" />
+                            <div class="box-close">
+                                @using (Html.BeginForm("RemoveFromCart", "Home", FormMethod.Post))
+                                {
+                                    <input type="hidden" name="cartItemId" value="@item.cartItemId" />
+                                    <button type="submit" class="btn-close ti-close" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?');"></button>
+                                }
+                            </div>
+                        </div>
+                        <div class="info-product">
+                            <h1 class="name-product-cart">@item.Product.productName</h1>
+                            <p class="price-cart">@String.Format("{0:0}", @item.Product.price),000 VNĐ</p>
+                        </div>
+                        <div>
+                            <p class="price-cart-main">@String.Format("{0:0}", @item.Product.price),000 VNĐ</p>
+                            <div class="amount-cart">
+                                <div class="change-amount-cart">
+                                    <button class="reduce-cart" onclick="updateCartQuantity(@item.cartItemId, -1)">-</button>
+                                    <input type="text" id="quantity-cart-@item.cartItemId" name="quantity" readonly="" value="@item.quantity" min="1" class="quantity-input">
+                                    <button class="increse-cart" onclick="updateCartQuantity(@item.cartItemId, 1)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Chưa có sản phẩm trong giỏ hàng...</p>
+            }
+        </div>
+        <div class="right-content-cart">
+            <div class="header-right-content-order">
+                <h1 class="info-order">Thông tin đơn hàng</h1>
+                <p class="total-order">
+                    Tổng tiền:
+                    <span class="total-money" id="total-amount">@String.Format("{0:0}", @Model.TotalAmount),000 VNĐ</span>
+                </p>
+            </div>
+            <ul>
+                <li>
+                    Phí vận chuyển sẽ được tính ở trang thanh toán.
+                </li>
+                <li>
+                    Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.
+                </li>
+            </ul>
+            @using (Html.BeginForm("ThanhToan", "Home", FormMethod.Get))
+            {
+                <input type="hidden" name="totalAmount" value="@Model.TotalAmount" />
+                <button class="btn-payment" type="submit">Thanh toán</button>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateCartQuantity(cartItemId, amount) {
+        var quantityInput = document.getElementById('quantity-cart-' + cartItemId);
+        if (quantityInput) {
+            var currentQuantity = parseInt(quantityInput.value);
+
+            if (isNaN(currentQuantity)) {
+                currentQuantity = 1;
+            }
+            var newQuantity = currentQuantity + amount;
+            if (newQuantity < 1) {
+                newQuantity = 1;
+            }
+            quantityInput.value = newQuantity;
+            updateTotalAmount();
+        } else {
+            console.error('Không tìm thấy phần tử với ID:', 'quantity-cart-' + cartItemId);
+        }
+    }
+
+    function updateTotalAmount() {
+        var totalAmount = 0;
+        var items = document.querySelectorAll('.item-cart');
+
+        items.forEach(function (item) {
+            var price = parseFloat(item.dataset.price);
+            var quantity = parseInt(item.querySelector('.quantity-input').value);
+            totalAmount += price * quantity;
+        });
+
+        document.getElementById('total-amount').innerText = totalAmount + ',000 VNĐ';
+    }
+</script>

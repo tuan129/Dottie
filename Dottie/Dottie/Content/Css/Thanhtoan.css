@@ -1,0 +1,120 @@
+﻿.payment-container{
+	display: flex;
+	justify-content: center;
+}
+
+.payment-content{
+	margin-top: 16px;
+	width: 1255px;
+}
+
+.info-cus{
+	margin-top: 16px;
+}
+
+.info-ship {
+	color: #333333;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1rem;
+}
+
+.field {
+	width: 100%;
+	float: left;
+	padding: 0.45em;
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 12px;
+}
+
+.show-field-label {
+	transform: none;
+	opacity: 1 !important;
+}
+
+.field-label {
+	font-size: 0.85714em;
+	font-weight: normal;
+	position: absolute;
+	top: 2px;
+	width: 50%;
+	padding: 0 0.93333em;
+	z-index: 1;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
+	pointer-events: none;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+	opacity: 0;
+	color: #999999;
+	transition: all 0.2s ease-out;
+	margin: 0.5em 0;
+	margin-top: 0.3em;
+	display: block;
+	left: 2px;
+}
+
+.field-input {
+	box-shadow: 0 0 0 1px #d9d9d9;
+	transition: all 0.2s ease-out;
+	background-color: white;
+	color: #333333;
+	border-radius: 4px;
+	display: block;
+	box-sizing: border-box;
+	width: 50%;
+	padding: 16px 8px;
+	word-break: normal;
+	border: none;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.field-input:focus{
+	box-shadow: 0 0 0 2px #338dbc;
+    outline: none;
+}
+
+.total-payment {
+	width: 30%;
+}
+
+.panding {
+	height: fit-content;
+	font-size: 16px;
+	color: #717171;
+}
+
+p {
+	margin-bottom: 8px;
+}
+
+.total {
+	color: #333;
+	font-size: 21px;
+	font-weight: 500;
+}
+
+span {
+	float: right;
+}
+
+.order-done {
+	margin: 12px 0;
+	border: none;
+	font-weight: 500;
+	padding: 16px 12px;
+	box-sizing: border-box;
+	text-align: center;
+	cursor: pointer;
+	background: #338dbc;
+	color: white;
+	font-size: 16px;
+}

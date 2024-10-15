@@ -102,8 +102,6 @@ CREATE TABLE FavoriteItems (
 -- Chèn dữ liệu mẫu vào bảng Users
 INSERT INTO Users (username, email, password, role) VALUES 
 (N'admin', N'maithaituan129@gmail.com', N'091204', N'Admin'),
-(N'user1', N'user1@example.com', N'password1', N'Khách hàng'),
-(N'user2', N'user2@example.com', N'password2', N'Khách hàng');
 
 -- Chèn dữ liệu mẫu vào bảng Categories
 INSERT INTO Categories (categoryName) VALUES 

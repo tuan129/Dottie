@@ -1,0 +1,30 @@
+﻿@model Dottie.Models.User
+@{
+    ViewBag.Title = "infoAccount";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+@Styles.Render("~/Content/Css/infoAccount.css")
+
+<div class="info-container">
+    <div class="info-content">
+        <div class="info-header">
+            <div class="icon-box">
+                <i class="info-user ti-user"></i>
+            </div>
+            <div class="user-name">@Model.username</div>
+            @using (Html.BeginForm("logout", "Home", FormMethod.Post))
+             {
+                <button type="submit" class="btn-logout">Đăng Xuất</button>
+             }
+        </div>
+
+        <div class="content-shopping">
+            <div class="shopping-truck">
+                <div class="badge-truck">@ViewBag.ShippingOrdersCount</div>
+                <i class="icon-truck ti-truck"></i>
+            </div>
+            <p class="shipping">Đang Giao Hàng</p>
+        </div>
+    </div>
+</div>

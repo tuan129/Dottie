@@ -1,0 +1,73 @@
+﻿@model Dottie.Models.CartViewModel
+@{
+    ViewBag.Title = "Thanh toán";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+@Styles.Render("~/Content/Css/Thanhtoan.css")
+
+<div class="payment-container">
+    <div class="payment-content">
+        <h1 class="info-ship">Thông tin giao hàng</h1>
+        @using (Html.BeginForm("HoanTatDonHang", "Home", FormMethod.Post))
+        {
+            <div class="info-cus">
+                <div class="field field-required">
+                    <label class="field-label" for="cus_address">
+                        Địa chỉ
+                    </label>
+                    <input placeholder="Địa chỉ" type="text" id="cus_address" name="cus_address" class="field-input" value="" required>
+                </div>
+                <div class="field field-required">
+                    <label class="field-label" for="cus_phone">
+                        Số điện thoại
+                    </label>
+                    <input placeholder="Số điện thoại" type="tel" id="cus_phone" name="cus_phone" class="field-input" value="" required>
+                </div>
+                <div class="total-payment">
+                    <div class="panding">
+                        <p class="Provisional">
+                            Tạm tính
+                            <span>@String.Format("{0:0}",@Model.TotalAmount),000VNĐ</span>
+                        </p>
+                        <p class="fee-ship">
+                            Phí vận chuyển
+                            <span>25,000 VND</span>
+                        </p>
+                        <p class="total">
+                            Tổng cộng
+                            <span>
+                                @(String.Format("{0:N0}", Model.TotalAmount + 25) + ",000 VNĐ")
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <button class="order-done" type="submit">Hoàn tất đơn hàng</button>
+            </div>
+            <input type="hidden" name="finalAmount" value="@(Model.TotalAmount + 25000)" />
+        }
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var inputs = document.querySelectorAll('.field-input');
+        inputs.forEach(function (input) {
+            toggleLabelClass(input);
+            input.addEventListener('input', function () {
+                toggleLabelClass(input);
+            });
+
+            input.addEventListener('blur', function () {
+                toggleLabelClass(input);
+            });
+        });
+        function toggleLabelClass(input) {
+            var label = input.parentElement.querySelector('.field-label');
+            if (input.value.trim() !== "") {
+                label.classList.add('show-field-label');
+            } else {
+                label.classList.remove('show-field-label');
+            }
+        }
+    });
+</script>

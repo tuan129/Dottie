@@ -1,0 +1,92 @@
+﻿@model Dottie.Models.Product
+@{
+    ViewBag.Title = "ProductDetails";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+@Styles.Render("~/Content/Css/productDetails.css")
+
+<div class="container-product-details">
+    <div class="content-product-details">
+        <div class="contaner-images-product">
+            <img class="images-product" src="@Model.imageUrl" alt="@Model.productName" />
+        </div>
+        <div class="details-product">
+            <h1 class="product-detail-name">
+                @Model.productName
+                <span class="status">
+                    Tình trạng:
+                    <strong class="stock">Còn hàng</strong>
+                </span>
+            </h1>
+
+            <p class="price-detail">
+                Giá:
+                <span class="price-detail-product">
+                    @Model.price VNĐ
+                    <span class="discount-detail">
+                        Giảm giá:
+                        <span class="discount-detail">@String.Format("{0:0}", @Model.discount) %</span>
+                    </span>
+                </span>
+            </p>
+
+            <p class="descriptopn-detail">@Model.description</p>
+
+            <div class="amount">
+                <p class="name-amount">Số lượng: </p>
+                <div class="change-amount">
+                    <button class="reduce" onclick="updateQuantity(-1)">-</button>
+                    <input type="text" id="quantity" name="quantity" readonly="" value="1" min="1" class="quantity-input ">
+                    <button class="increse" onclick="updateQuantity(1)">+</button>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart(@Model.productId)">Thêm giỏ hàng</button>
+                <button class="buy-now" onclick="buyNow(@Model.productId)">Mua ngay</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function updateQuantity(amount) {
+        var quantityInput = document.getElementById('quantity');
+        var currentQuantity = parseInt(quantityInput.value);
+
+        if (isNaN(currentQuantity)) {
+            currentQuantity = 1;
+        }
+        var newQuantity = currentQuantity + amount;
+        if (newQuantity < 1) {
+            newQuantity = 1;
+        }
+        quantityInput.value = newQuantity;
+    }
+
+    function addToCart(productId) {
+        var quantity = document.getElementById('quantity').value;
+
+        $.ajax({
+            url: '@Url.Action("AddToCart", "Home")',
+            type: 'POST',
+            data: { productId: productId, quantity: quantity },
+            success: function(response) {
+                if (response.success) {
+                    alert('Đã thêm sản phẩm vào giỏ hàng!');
+                }
+            },
+            error: function() {
+                alert('Có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.');
+            }
+        });
+    }
+
+    function buyNow(productId) {
+        var quantity = document.getElementById('quantity').value;
+        window.location.href = '@Url.Action("Cart", "Home")?productId=' + productId + '&quantity=' + quantity;
+    }
+</script>
+

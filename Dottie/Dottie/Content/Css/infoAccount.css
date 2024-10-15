@@ -1,0 +1,86 @@
+﻿.info-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.info-header {
+	width: 1255px;
+	display: flex;
+	padding: 26px 21px 26px;
+	background: #000000;
+	position: relative;
+}
+
+.icon-box{
+	height: 80px;
+	width: 80px;
+	text-align: center;
+	background-color: #ffffff;
+	border-radius: 9999px;
+}
+
+.info-user{
+	font-size: 40px;
+	line-height: 80px;
+}
+
+.user-name {
+	color: #ffffff;
+	font-size: 20px;
+	text-transform: uppercase;
+	line-height: 80px;
+	margin-left: 16px;
+}
+
+.btn-logout{
+	align-self: flex-end;
+	position: absolute;
+	right: 40px;
+	top: 30px;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 12px; 
+}
+
+.content-shopping{
+	margin: 16px 0;
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+
+}
+
+.shopping-truck {
+	position: relative;
+}
+
+.badge-truck {
+	position: absolute;
+	left: 22px;
+	top: 0;
+	width: 16px;
+	height: 18px;
+	background: #FF0000;
+	font-weight: 700;
+	font-size: 9px;
+	text-align: center;
+	line-height: 18px;
+	text-transform: capitalize;
+	color: #FFFFFF;
+	border-radius: 99999999px;
+}
+
+.icon-truck {
+	font-size: 30px;
+}
+
+
+.shipping {
+	margin-top: 13px;
+	font-weight: 500;
+	line-height: calc(12 / 10);
+	text-transform: capitalize;
+	color: #000000;
+	font-size: 14px;
+}
